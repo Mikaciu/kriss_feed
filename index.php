@@ -3452,6 +3452,7 @@ class Feed
                 ob_flush();
                 flush();
             } else {
+            	$strBegin = "\n" . date('M d H:i:s') . ' ' . getenv('APACHE_RUN_USER') . ' KRiSS[' . getmypid() . ']: ' . trim($strBegin);
                 echo strip_tags($strBegin.$strEnd);
             }
         }
@@ -3473,6 +3474,7 @@ class Feed
             ob_flush();
             flush();
         } else {
+        	$strBegin = "\n" . date('M d H:i:s') . ' ' . getenv('APACHE_RUN_USER') . ' KRiSS[' . getmypid() . ']: ' . trim($strBegin);
             echo strip_tags($strBegin.$strEnd);
         }
 
